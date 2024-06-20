@@ -1,0 +1,30 @@
+// flex
+
+@mixin flexbox(
+  $justify-content: false,
+  $align-items: false,
+  $direction: false,
+  $flex: false,
+  $gap: false,
+  $flex-wrap: false
+) {
+  display: flex;
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+  @if $align-items {
+    align-items: $align-items;
+  }
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $flex {
+    flex: $flex;
+  }
+  @if $gap {
+    gap: $gap * 1rem;
+  }
+  @if $flex-wrap {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,17 @@
+mat-form-field {
+  width: 300px;
+}
+.signup-form {
+  display: flex;
+//   min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .signup-form-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+}

@@ -1,0 +1,30 @@
+<!-- <p>sidenav-list works!</p>/ -->
+<mat-nav-list>
+    <div *ngIf="!(isAuth$ | async)">
+        <a mat-list-item routerLink="/signup" (click)="onClose()">
+            <mat-icon>face</mat-icon>
+            <span classs="nav-caption">Signup</span>
+        </a>
+    </div>
+    <div *ngIf="!(isAuth$ | async)">
+        <a mat-list-item routerLink="/login" (click)="onClose()">
+            <mat-icon>input</mat-icon>
+            <span>Login</span>
+        </a>
+    </div>
+    <div *ngIf="isAuth$ | async">
+        <a mat-list-item routerLink="/training" (click)="onClose()">
+            <mat-icon>fitness_center</mat-icon>
+            <span classs="nav-caption">Training</span>
+        </a>
+    </div>
+    <div *ngIf="isAuth$ | async">
+        <mat-list-item>
+            <button mat-icon-button (click)="onLogout()">
+                <mat-icon>eject</mat-icon>
+                <span class="nav-caption">Logout</span>
+            </button>
+        </mat-list-item>
+    </div>
+    
+</mat-nav-list>
